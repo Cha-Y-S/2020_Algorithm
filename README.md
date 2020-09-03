@@ -4,4 +4,4 @@
 
 IDE: vscode
 
-Lang: C++
+Lang: std c++11
