@@ -51,14 +51,14 @@ void merge(vector<pair<int, string> >& v, int p, int q, int r)
     int n2 = r - q;
 
     for(int i = 0; i < n1; i++)
-        left.push_back(v[p + i - 1]);
+        left.push_back(v[p + i]);
     for(int i = 0; i < n2; i++)
-        right.push_back(v[q + i]);
-    left.push_back(pair<int, string>(INT_MAX, NULL));
-    right.push_back(pair<int, string>(INT_MAX, NULL));
+        right.push_back(v[q + i + 1]);
+    left.push_back(pair<int, string>(INT_MAX, ""));
+    right.push_back(pair<int, string>(INT_MAX, ""));
 
     int i = 0; int j = 0;
-    for(int k = p; k < r; k++)
+    for(int k = p; k < r + 1; k++)
     {
         if (left[i] <= right[j])
         {
